@@ -7379,6 +7379,8 @@ div.news {
     line-height: 24px;
     color: #666666;
     margin: 76px 474px 0px 516px; }
+    div.news p.bottom i {
+      margin-left: 10px; }
   @media (max-width: 1145px) {
     div.news {
       height: auto;
@@ -7492,6 +7494,8 @@ div.gallery {
     line-height: 24px;
     color: #666666;
     margin: 75px 474px 99px 516px; }
+    div.gallery p.gallery-bottom i {
+      margin-left: 10px; }
   div.gallery div.hidden {
     display: none; }
   @media (max-width: 1145px) {

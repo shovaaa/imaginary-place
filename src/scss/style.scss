@@ -401,7 +401,13 @@ div.news{
         line-height: 24px;
         color: display(bottom-text);
         margin: 76px 474px 0px 516px;
+
+        i{
+            margin-left: 10px;
+        }
     }
+
+    
 
     @include desktop{
         height: auto;
@@ -559,6 +565,11 @@ div.gallery{
         line-height: 24px;
         color: display(bottom-text);
         margin: 75px 474px 99px 516px;
+
+        i{
+            margin-left: 10px;
+        }
+        
     }
 
     div.hidden{
