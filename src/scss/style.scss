@@ -23,6 +23,7 @@ $colors:(
 
 $zero-margin: 0px;
 $zero-padding: 0px;
+$mob-padding: 30px;
 $uppercase: uppercase;
 $news-img: 195px;
 $events-img: 165px;
@@ -84,9 +85,21 @@ $card-text: (
 $desktop: 1145px;
 
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
+    @media (max-width: #{$desktop}) {
         @content;
     }
+}
+
+$mobile: 845px;
+
+@mixin mobile{
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+html{
+    margin: $zero-margin;
+    padding: $zero-padding;
 }
 
 body{
@@ -98,6 +111,14 @@ body{
         border: getHorizontalLongLine(border);
         width: getHorizontalLongLine(width);
         align-self: getHorizontalLongLine(align);
+
+        @include desktop{
+            width: 845px;
+        }
+
+        @include mobile{
+            width: 300px;
+        }
     }
 
     hr.small-line{
@@ -117,17 +138,51 @@ div.header{
     margin: $zero-margin;
     padding: $zero-padding;
 
+    @include desktop{
+        height: auto;
+    }
+
     section.container{
         width: 100%;
         margin: 0 auto;
         padding-left: 125px;
 
+        @include desktop{
+            padding: $mob-padding;
+        }
+        
         nav.second{
             display: none;
+
+            @include desktop{
+                display: inline-block;
+                height: auto;
+                padding: $mob-padding;
+                padding-left: 50px;
+                text-align: center;
+
+                .navbar-nav{
+                    margin: $zero-margin;
+                    padding: $zero-padding;
+                }
+                .nav-item{
+                    padding: $mob-padding;
+                }
+                
+            }
+
+            @include mobile{
+                padding: $zero-padding;
+                padding-top: 20px;
+
+                .navbar-brand{
+                    margin-right: $zero-margin;
+                }
+            }
         }
 
         nav{
-            
+    
             height: 100px;
             padding: 0px 20px;
 
@@ -144,7 +199,7 @@ div.header{
                         text-transform: $uppercase;
                         padding: getNavLink(padding);
                         margin: getNavLink(margin);
-                        }
+                    }
                 }
                 
             }
@@ -173,6 +228,10 @@ div.header{
                     }
                 }
             }
+
+            @include desktop{
+                display: none;
+            }
            
         }
         
@@ -192,23 +251,39 @@ section.bg{
         padding: 291.24px 409px 291.76px;
         font-size: 20px;
         line-height: 40px;
+
+        @include desktop{
+            width: 100%;
+            padding: 290px 50px;
+        }
+
+        @include mobile{
+            width: 100%;
+            padding: 130px 30px;
+        }
     }
 }
 
 div.header-end-grid-container{
     display: grid;
     grid-template-columns: 1fr 95px 1fr;
-    grid-template-areas: 
-        "address line icon";
     height: 100px;
+
+    @include mobile{
+       display: grid;
+       padding: $mob-padding;
+    }
     
     section.header-end1{
-        grid-area: address;
-        align-self: left;
+        text-align: right;
         font-size: 14px;
         line-height: 22px;
         justify-self: end;
         padding-top: 29px;
+
+        p{
+            margin: $zero-margin;
+        }
     }
     section.middle-line{
         width: 1px;
@@ -218,13 +293,37 @@ div.header-end-grid-container{
         justify-self: center;
     }
     section.header-end2{
-        grid-area: icon;
         align-self: left;
         font-size: 18px;
         line-height: 18px;
         justify-self: start;
         padding-top: 42px;
-    }    
+    }
+    
+    @include mobile{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        height: auto;
+
+        section.header-end1{
+            text-align: center;
+            justify-self: center;
+            padding: $zero-padding;
+            margin: $zero-margin;
+        }
+
+        section.middle-line{
+            height: 1px;
+            width: 39px;
+        }
+
+        section.header-end2{
+            align-self: center;
+            justify-self: center;
+            padding: $zero-padding;
+            margin: $zero-margin;
+        }
+    }
 }
 
 div.about{
@@ -233,12 +332,9 @@ div.about{
     padding: 94px 151px 91px 150px;
     display: grid;
     grid-template-columns: 50% auto;
-    grid-template-areas: 
-        "heading-img description";
     
     section.heading-img{
         padding-right: 30px;
-        grid-area: heading-img;
 
         h1{
             font-size: 35px;
@@ -249,7 +345,6 @@ div.about{
     section.description{
         padding-left: 30px;
         padding-top: 83px;
-        grid-area: description;
 
         h2{
             font-size: 22px;
@@ -263,6 +358,29 @@ div.about{
             margin-bottom: 30px;
         }
     }
+
+    @include desktop{
+        padding: $mob-padding;
+        height: auto;
+    }
+    @include mobile{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+
+        section.heading-img{
+            padding: $mob-padding;
+            margin: $zero-margin;
+            
+            .img-fluid{
+                width: 100%;
+            }
+        }
+
+        section.description{
+            padding: $mob-padding;
+            margin: $zero-margin;
+        }
+    } 
 }
 
 div.news{
@@ -283,6 +401,16 @@ div.news{
         line-height: 24px;
         color: display(bottom-text);
         margin: 76px 474px 0px 516px;
+    }
+
+    @include desktop{
+        height: auto;
+        padding: $mob-padding;
+
+        p.bottom{
+            margin: 60px auto;
+            height: auto;
+        }
     }
 }
 
@@ -321,6 +449,17 @@ div.news-grid-container{
             padding: 13px 20.51px;
         }
     }
+
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        
+    }
+
+    @include mobile{
+        display: grid;
+        grid-template-columns: repeat(1, auto); 
+    }
 }
 
 div.events{
@@ -334,17 +473,24 @@ div.events{
         margin-bottom: 42px;
         padding-left: 83px;
     }
+
+    @include desktop{
+        height: auto;
+        padding: $mob-padding;
+
+        h2.event-heading{
+            padding-left: 0px;
+        }
+    }
 }
 
 
 section.event-grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     padding: 0px 82px;
 
     div.card{
-        
-        
         img.card-img-top{
             height: $events-img;
         }
@@ -365,6 +511,28 @@ section.event-grid-container{
             text-align: left;
             padding: 13px 20.51px;
         }
+    }
+
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        padding: $zero-padding;
+
+        div.card{
+            margin-bottom: 30px;
+        }
+        
+    }
+
+    @include mobile{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        padding: $zero-padding;
+
+        div.card{
+            margin-bottom: 30px;
+        }
+        
     }
 }
 
@@ -391,6 +559,23 @@ div.gallery{
         line-height: 24px;
         color: display(bottom-text);
         margin: 75px 474px 99px 516px;
+    }
+
+    div.hidden{
+        display: none;
+    }
+
+    @include desktop{
+        height: auto;
+        padding: $mob-padding;
+
+        div.hidden{
+            display: block;
+        }
+        p.gallery-bottom{
+            margin: 60px auto;
+            height: auto;
+        } 
     }
 }
 
@@ -502,6 +687,10 @@ section.gallery-grid-container{
             padding: 268px 58px 14px 20px;
         }
     }
+
+    @include desktop{
+        display: none;  
+    }
 }
 
 div.contact{
@@ -513,6 +702,11 @@ div.contact{
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 42px;
+    }
+
+    @include desktop{
+        height: auto;
+        padding: $mob-padding;
     }
 }
 
@@ -575,6 +769,46 @@ div.contact-grid-container{
                 border: 2px solid display(form-button);
                 border-radius: 6px;
                 margin: 30px 400px 49px 250px;
+            }
+        }
+    }
+
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 0px;
+
+        .contact-grid-1{
+            p{
+                width: 100%;
+            }
+        }
+
+        .contact-grid-2{
+            img.map-img{
+                width: 100%;
+                margin-top: 30px;
+            }
+            form{
+                display: grid;
+                grid-template-columns: repeat(1, auto);
+
+                .form-grid-1{
+                    input{
+                        margin-right: 20px;
+                    }
+                    
+                }
+
+                .form-grid-2{
+                    input{
+                        width: 100%;
+                    }
+                    
+                }
+                button{
+                    margin: 0 auto;
+                }
             }
         }
     }
