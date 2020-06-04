@@ -1,0 +1,42 @@
+.container {
+  height: 100px;
+}
+
+.navbar-brand {
+  color: #191919 !important;
+  size: 24px;
+  line-height: 28px;
+}
+
+.nav-link {
+  color: #666666 !important;
+  size: 24px;
+  line-height: 28px;
+}
+
+.end {
+  height: 100px;
+}
+
+body {
+  margin: 0;
+}
+
+.bg {
+  width: 100%;
+  height: 703px;
+  opacity: 0.75;
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.header {
+  background-color: #E3E3E3;
+}
+
+.img {
+  width: 300px;
+  height: auto;
+}
+/*# sourceMappingURL=style.css.map */
