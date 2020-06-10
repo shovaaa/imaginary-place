@@ -7175,7 +7175,7 @@ body {
     @media (max-width: 1145px) {
       body hr.long-line {
         width: 845px; } }
-    @media (max-width: 845px) {
+    @media (max-width: 650px) {
       body hr.long-line {
         width: 300px; } }
   body hr.small-line {
@@ -7193,35 +7193,36 @@ div.header {
   padding: 0px; }
   @media (max-width: 1145px) {
     div.header {
+      width: 100%;
       height: auto; } }
   div.header section.container {
     width: 100%;
-    margin: 0 auto;
     padding-left: 125px; }
     @media (max-width: 1145px) {
       div.header section.container {
+        width: 100%;
         padding: 30px; } }
     div.header section.container nav.second {
       display: none; }
       @media (max-width: 1145px) {
         div.header section.container nav.second {
-          display: inline-block;
-          height: auto;
-          padding: 30px;
-          padding-left: 50px;
-          text-align: center; }
+          display: flex;
+          flex-direction: row;
+          height: auto; }
+          div.header section.container nav.second .navbar-brand {
+            margin-right: 20%; }
           div.header section.container nav.second .navbar-nav {
-            margin: 0px;
             padding: 0px; }
           div.header section.container nav.second .nav-item {
-            padding: 30px; } }
-      @media (max-width: 845px) {
+            padding: 0px;
+            margin-right: 5%; } }
+      @media (max-width: 650px) {
         div.header section.container nav.second {
-          padding: 0px;
-          padding-top: 20px; }
+          padding: 0px; }
           div.header section.container nav.second .navbar-brand {
-            margin-right: 0px; } }
+            margin-right: 20px; } }
     div.header section.container nav {
+      width: 100%;
       height: 100px;
       padding: 0px 20px; }
       div.header section.container nav #nav-left {
@@ -7240,9 +7241,9 @@ div.header {
         font-size: 24px;
         line-height: 28px;
         text-transform: uppercase;
-        margin: 0 auto; }
+        margin-right: 0px; }
       div.header section.container nav #nav-right {
-        margin: 0 auto; }
+        padding-right: 10%; }
         div.header section.container nav #nav-right .nav-item {
           padding-left: 35px; }
           div.header section.container nav #nav-right .nav-item .nav-link {
@@ -7264,24 +7265,24 @@ section.bg {
   background-repeat: no-repeat;
   background-size: 100% 100%; }
   section.bg p {
-    height: 120px;
-    padding: 291.24px 409px 291.76px;
+    width: 100%;
+    height: auto;
+    padding-top: 20%;
+    padding-right: 25%;
+    padding-left: 25%;
     font-size: 20px;
     line-height: 40px; }
-    @media (max-width: 1145px) {
+    @media (max-width: 650px) {
       section.bg p {
-        width: 100%;
-        padding: 290px 50px; } }
-    @media (max-width: 845px) {
-      section.bg p {
-        width: 100%;
-        padding: 130px 30px; } }
+        padding-top: 30%;
+        padding-right: 30px;
+        padding-left: 30px; } }
 
 div.header-end-grid-container {
   display: grid;
   grid-template-columns: 1fr 95px 1fr;
   height: 100px; }
-  @media (max-width: 845px) {
+  @media (max-width: 650px) {
     div.header-end-grid-container {
       display: grid;
       padding: 30px; } }
@@ -7305,7 +7306,7 @@ div.header-end-grid-container {
     line-height: 18px;
     justify-self: start;
     padding-top: 42px; }
-  @media (max-width: 845px) {
+  @media (max-width: 650px) {
     div.header-end-grid-container {
       display: grid;
       grid-template-columns: repeat(1, auto);
@@ -7351,7 +7352,7 @@ div.about {
     div.about {
       padding: 30px;
       height: auto; } }
-  @media (max-width: 845px) {
+  @media (max-width: 650px) {
     div.about {
       display: grid;
       grid-template-columns: repeat(1, auto); }
@@ -7368,26 +7369,30 @@ div.news {
   width: 100%;
   height: 1052px;
   padding: 91px 151px 99px 150px; }
+  @media (max-width: 1145px) {
+    div.news {
+      height: auto;
+      padding: 30px; } }
   div.news h2.heading {
     font-size: 35px;
     line-height: 41px;
     margin-bottom: 40px; }
   div.news p.bottom {
-    width: 150px;
+    width: 100%;
+    padding-right: 45%;
+    padding-left: 45%;
     height: 50px;
     font-size: 20px;
     line-height: 24px;
     color: #666666;
-    margin: 76px 474px 0px 516px; }
+    margin-top: 76px;
+    align-items: center; }
+    @media (max-width: 650px) {
+      div.news p.bottom {
+        padding-right: 35%;
+        padding-left: 35%; } }
     div.news p.bottom i {
       margin-left: 10px; }
-  @media (max-width: 1145px) {
-    div.news {
-      height: auto;
-      padding: 30px; }
-      div.news p.bottom {
-        margin: 60px auto;
-        height: auto; } }
 
 div.news-grid-container {
   display: grid;
@@ -7418,7 +7423,7 @@ div.news-grid-container {
     div.news-grid-container {
       display: grid;
       grid-template-columns: repeat(2, auto); } }
-  @media (max-width: 845px) {
+  @media (max-width: 650px) {
     div.news-grid-container {
       display: grid;
       grid-template-columns: repeat(1, auto); } }
@@ -7435,14 +7440,30 @@ div.events {
   @media (max-width: 1145px) {
     div.events {
       height: auto;
-      padding: 30px; }
-      div.events h2.event-heading {
-        padding-left: 0px; } }
+      padding: 30px; } }
+  @media (max-width: 650px) {
+    div.events h2.event-heading {
+      padding-left: 30px; } }
+
+div.event-main-grid-container {
+  display: grid;
+  grid-template-columns: 82px 1fr 82px; }
+  div.event-main-grid-container i.fas {
+    font-size: 48px;
+    align-self: center;
+    color: #191919; }
+  div.event-main-grid-container i.fa-chevron-left {
+    padding-right: 66px; }
+  div.event-main-grid-container i.fa-chevron-right {
+    padding-left: 66px; }
+  @media (max-width: 1145px) {
+    div.event-main-grid-container {
+      display: none; } }
 
 section.event-grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 0px 82px; }
+  padding: 0px; }
   section.event-grid-container div.card img.card-img-top {
     height: 165px; }
   section.event-grid-container div.card h3.card-title {
@@ -7459,20 +7480,26 @@ section.event-grid-container {
   section.event-grid-container div.card .btn {
     text-align: left;
     padding: 13px 20.51px; }
+
+div.hide {
+  display: none; }
   @media (max-width: 1145px) {
-    section.event-grid-container {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      padding: 0px; }
-      section.event-grid-container div.card {
-        margin-bottom: 30px; } }
-  @media (max-width: 845px) {
-    section.event-grid-container {
-      display: grid;
-      grid-template-columns: repeat(1, auto);
-      padding: 0px; }
-      section.event-grid-container div.card {
-        margin-bottom: 30px; } }
+    div.hide {
+      display: block;
+      padding: 30px; } }
+  @media (max-width: 1145px) {
+    div.hide .card-title {
+      padding-left: 10px; } }
+  @media (max-width: 1145px) {
+    div.hide .card-text {
+      padding-left: 10px; } }
+  div.hide .carousel-control-prev,
+  div.hide .carousel-control-next {
+    width: 20px; }
+  div.hide .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; }
+  div.hide .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
 
 div.gallery {
   width: 100%;
@@ -7488,12 +7515,19 @@ div.gallery {
     line-height: 21px;
     margin-bottom: 50px; }
   div.gallery p.gallery-bottom {
-    width: 150px;
+    width: 100%;
     height: 50px;
+    padding-right: 45%;
+    padding-left: 45%;
     font-size: 20px;
     line-height: 24px;
     color: #666666;
-    margin: 75px 474px 99px 516px; }
+    margin-top: 75px; }
+    @media (max-width: 650px) {
+      div.gallery p.gallery-bottom {
+        padding-right: 35%;
+        padding-left: 35%;
+        margin-top: 75px; } }
     div.gallery p.gallery-bottom i {
       margin-left: 10px; }
   div.gallery div.hidden {
@@ -7503,10 +7537,7 @@ div.gallery {
       height: auto;
       padding: 30px; }
       div.gallery div.hidden {
-        display: block; }
-      div.gallery p.gallery-bottom {
-        margin: 60px auto;
-        height: auto; } }
+        display: block; } }
 
 section.gallery-grid-container {
   display: grid;
@@ -7681,7 +7712,8 @@ footer {
     text-transform: uppercase;
     font-size: 18px;
     line-height: 20px;
-    padding-bottom: 34px; }
+    padding-bottom: 34px;
+    margin-bottom: 0px; }
     footer .end-text span {
       font-size: 35px;
       line-height: 41px; }

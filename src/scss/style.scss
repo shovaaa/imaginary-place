@@ -19,6 +19,7 @@ $colors:(
     contact-text: #4A4A4A,
     form-border: #D2D2D2,
     form-button: #191919,
+    font-icon: #191919,
 );
 
 $zero-margin: 0px;
@@ -90,7 +91,7 @@ $desktop: 1145px;
     }
 }
 
-$mobile: 845px;
+$mobile: 650px;
 
 @mixin mobile{
     @media (max-width: #{$mobile}) {
@@ -131,6 +132,7 @@ body{
 
 }
 
+//header div style
 div.header{
     width: 100%;
     height: 903px;
@@ -138,51 +140,57 @@ div.header{
     margin: $zero-margin;
     padding: $zero-padding;
 
+    //header div desktop style
     @include desktop{
+        width: 100%;
         height: auto;
     }
 
+    //the menu container style
     section.container{
         width: 100%;
-        margin: 0 auto;
         padding-left: 125px;
 
+        //the menu container desktop style
         @include desktop{
+            width: 100%;
             padding: $mob-padding;
         }
         
+        //responsive menu for tab and mobile
         nav.second{
             display: none;
 
             @include desktop{
-                display: inline-block;
+                display: flex;
+                flex-direction: row;
                 height: auto;
-                padding: $mob-padding;
-                padding-left: 50px;
-                text-align: center;
+
+                .navbar-brand{
+                    margin-right: 20%;
+                }
 
                 .navbar-nav{
-                    margin: $zero-margin;
                     padding: $zero-padding;
                 }
                 .nav-item{
-                    padding: $mob-padding;
+                    padding: $zero-padding;
+                    margin-right: 5%;
                 }
                 
             }
 
             @include mobile{
                 padding: $zero-padding;
-                padding-top: 20px;
-
                 .navbar-brand{
-                    margin-right: $zero-margin;
+                    margin-right: 20px;
                 }
             }
         }
 
+        //the menu for desktop
         nav{
-    
+            width: 100%;
             height: 100px;
             padding: 0px 20px;
 
@@ -209,12 +217,11 @@ div.header{
                 font-size: 24px;
                 line-height: 28px;
                 text-transform: $uppercase;
-                margin: 0 auto;
+                margin-right: 0px;
             }
 
             #nav-right{
-                margin: 0 auto;
-
+                padding-right: 10%;
                 .nav-item{
                     padding-left: 35px;
 
@@ -247,19 +254,18 @@ section.bg{
     background-size: 100% 100%; 
     
     p{
-        height: 120px;
-        padding: 291.24px 409px 291.76px;
+        width: 100%;
+        height: auto;
+        padding-top: 20%;
+        padding-right: 25%;
+        padding-left: 25%;
         font-size: 20px;
         line-height: 40px;
 
-        @include desktop{
-            width: 100%;
-            padding: 290px 50px;
-        }
-
         @include mobile{
-            width: 100%;
-            padding: 130px 30px;
+            padding-top: 30%;
+            padding-right: $mob-padding;
+            padding-left: $mob-padding;
         }
     }
 }
@@ -387,6 +393,11 @@ div.news{
     width: 100%;
     height: 1052px;
     padding: 91px 151px 99px 150px;
+
+    @include desktop{
+        height: auto;
+        padding: $mob-padding;
+    }
     
     h2.heading{
         font-size: 35px;
@@ -395,27 +406,23 @@ div.news{
     }
 
     p.bottom{
-        width: 150px;
+        width: 100%;
+        padding-right: 45%;
+        padding-left: 45%;
         height: 50px;
         font-size: 20px;
         line-height: 24px;
         color: display(bottom-text);
-        margin: 76px 474px 0px 516px;
+        margin-top: 76px;
+        align-items: center;
 
+        @include mobile{
+            padding-right: 35%;
+            padding-left: 35%;
+        }
+    
         i{
             margin-left: 10px;
-        }
-    }
-
-    
-
-    @include desktop{
-        height: auto;
-        padding: $mob-padding;
-
-        p.bottom{
-            margin: 60px auto;
-            height: auto;
         }
     }
 }
@@ -423,6 +430,7 @@ div.news{
 div.news-grid-container{
     display: grid;
     grid-template-columns: repeat(4, auto);
+
 
     div.card{
         background-color: display(bg);
@@ -483,18 +491,39 @@ div.events{
     @include desktop{
         height: auto;
         padding: $mob-padding;
+    }
 
+    @include mobile{
         h2.event-heading{
-            padding-left: 0px;
+            padding-left: $mob-padding;
         }
     }
 }
 
+div.event-main-grid-container{
+    display: grid;
+    grid-template-columns: 82px 1fr 82px;
 
+    i.fas{
+        font-size: 48px;
+        align-self: center;
+        color: display(font-icon);    
+    }
+    i.fa-chevron-left{
+        padding-right: 66px;
+    }
+    i.fa-chevron-right{
+        padding-left: 66px;
+    }
+
+    @include desktop{
+        display: none;
+    }
+}
 section.event-grid-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 0px 82px;
+    padding: $zero-padding;
 
     div.card{
         img.card-img-top{
@@ -518,28 +547,39 @@ section.event-grid-container{
             padding: 13px 20.51px;
         }
     }
+}
+
+div.hide{
+    display: none;
 
     @include desktop{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        padding: $zero-padding;
-
-        div.card{
-            margin-bottom: 30px;
-        }
-        
+        display: block;
+        padding: $mob-padding;
     }
 
-    @include mobile{
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        padding: $zero-padding;
-
-        div.card{
-            margin-bottom: 30px;
+    .card-title{
+        @include desktop{
+            padding-left: 10px;
         }
-        
     }
+    .card-text{
+        @include desktop{
+            padding-left: 10px;
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        width: 20px;
+    }
+    
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    }
+       
+       .carousel-control-next-icon {
+         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+       }
 }
 
 div.gallery{
@@ -559,12 +599,20 @@ div.gallery{
         margin-bottom: 50px;
     }
     p.gallery-bottom{
-        width: 150px;
+        width: 100%;
         height: 50px;
+        padding-right: 45%;
+        padding-left: 45%;
         font-size: 20px;
         line-height: 24px;
         color: display(bottom-text);
-        margin: 75px 474px 99px 516px;
+        margin-top: 75px;
+
+        @include mobile{
+            padding-right: 35%;
+            padding-left: 35%;
+            margin-top: 75px;
+        }
 
         i{
             margin-left: 10px;
@@ -583,10 +631,6 @@ div.gallery{
         div.hidden{
             display: block;
         }
-        p.gallery-bottom{
-            margin: 60px auto;
-            height: auto;
-        } 
     }
 }
 
@@ -840,6 +884,7 @@ footer{
         font-size: 18px;
         line-height: 20px;
         padding-bottom: 34px;
+        margin-bottom: $zero-margin;
         span{
             font-size: 35px;
             line-height: 41px;
