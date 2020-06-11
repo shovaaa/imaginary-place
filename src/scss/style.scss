@@ -450,13 +450,24 @@ div.news{
 
         @include desktop{
             padding: $mob-padding;
+            gap: 30px;
+            .card-4{
+                margin-top: -45px;
+            }
+        }
+
+        @include mobile{
+            gap: 0px;
+            .card-6{
+                margin-top: 0px;
+            }
         }
         div.col-md-6,
-        div.col-sm-6{
+        div.col-sm-1{
             padding: $zero-padding;
 
             @include desktop{
-                padding: $zero-padding;
+                padding-right: $zero-padding;
                 max-width: 100%;
             }   
         }
@@ -471,7 +482,7 @@ div.news{
 
             @include desktop{
                 width: 100%;
-                height: auto;
+                height: auto;    
             }
 
             .card-title{
@@ -487,12 +498,10 @@ div.news{
                 color: display(card-text);
                 padding: 0px 17.71px 23px 20.51px;
             }
-            img.card-img-top{
-                height: $news-img
-            }
-            
-            img.long{
-                height: 355px;
+
+            .img-fluid{
+                max-width: 100%;
+                height: auto;
             }  
             
             .btn{
@@ -681,9 +690,11 @@ div.gallery{
     }
 }
 
-section.gallery-grid-container{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+div.gallery-grid-container{
+
+    .col-md-3{
+        padding: $zero-padding;
+    }
 
     .grid-1{
         height: 180px;
