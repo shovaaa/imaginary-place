@@ -171,17 +171,21 @@ div.header{
                 }
 
                 .navbar-nav{
-                    padding: $zero-padding;
+                    padding: $mob-padding;
                 }
                 .nav-item{
-                    padding: $zero-padding;
-                    margin-right: 5%;
+                    padding-left: 30%;
+                    padding-right: 30%;
+                }
+                .nav-item:hover{
+                    background-color: white;
                 }
                 
             }
 
             @include mobile{
                 padding: $zero-padding;
+
                 .navbar-brand{
                     margin-right: 20px;
                 }
@@ -208,7 +212,12 @@ div.header{
                         padding: getNavLink(padding);
                         margin: getNavLink(margin);
                     }
+                    .nav-link:hover{
+                        background-color: white;
+                    }
                 }
+
+                
                 
             }
 
@@ -222,6 +231,7 @@ div.header{
 
             #nav-right{
                 padding-right: 10%;
+
                 .nav-item{
                     padding-left: 35px;
 
@@ -233,7 +243,13 @@ div.header{
                         padding: getNavLink(padding);
                         margin: getNavLink(margin);
                     }
+                    .nav-link:hover{
+                        background-color: white;
+                    }
                 }
+
+                
+
             }
 
             @include desktop{
@@ -403,6 +419,10 @@ div.news{
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 40px;
+
+        @include desktop{
+            padding: $mob-padding;
+        }
     }
 
     p.bottom{
@@ -425,54 +445,72 @@ div.news{
             margin-left: 10px;
         }
     }
-}
 
-div.news-grid-container{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+    div.row{
 
-
-    div.card{
-        background-color: display(bg);
-        margin-bottom: 4px;
-        margin-right: 4px;
-
-        .card-title{
-            font-size: getCardTitle(font-size);
-            line-height: getCardTitle(line-height);
-            padding: 22px 0px 20px 20.51px;
-            color: display(card-title);
-            margin: $zero-margin;
+        @include desktop{
+            padding: $mob-padding;
         }
-        .card-text{
-            font-size: getCardText(font-size);
-            line-height: getCardText(line-height);
-            color: display(card-text);
-            padding: 0px 17.71px 23px 20.51px;
-        }
-        img.card-img-top{
-            height: $news-img
-        }
-        
-        img.long{
-            height: 355px;
-        }  
-        
-        .btn{
-            text-align: left;
-            padding: 13px 20.51px;
-        }
-    }
+        div.col-md-6,
+        div.col-sm-6{
+            padding: $zero-padding;
 
-    @include desktop{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        
-    }
+            @include desktop{
+                padding: $zero-padding;
+                max-width: 100%;
+            }   
+        }
+        div.col-xl-3{
+            padding: $zero-padding;
+        }
 
-    @include mobile{
-        display: grid;
-        grid-template-columns: repeat(1, auto); 
+        div.card{
+            background-color: display(bg);
+            margin-bottom: 4px;
+            margin-right: 4px;
+
+            @include desktop{
+                width: 100%;
+                height: auto;
+            }
+
+            .card-title{
+                font-size: getCardTitle(font-size);
+                line-height: getCardTitle(line-height);
+                padding: 22px 0px 20px 20.51px;
+                color: display(card-title);
+                margin: $zero-margin;
+            }
+            .card-text{
+                font-size: getCardText(font-size);
+                line-height: getCardText(line-height);
+                color: display(card-text);
+                padding: 0px 17.71px 23px 20.51px;
+            }
+            img.card-img-top{
+                height: $news-img
+            }
+            
+            img.long{
+                height: 355px;
+            }  
+            
+            .btn{
+                text-align: left;
+                padding: 13px 20.51px;
+            }
+        }
+
+        @include desktop{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            
+        }
+
+        @include mobile{
+            display: grid;
+            grid-template-columns: repeat(1, auto); 
+        }
     }
 }
 
@@ -500,57 +538,75 @@ div.events{
     }
 }
 
-div.event-main-grid-container{
-    display: grid;
-    grid-template-columns: 82px 1fr 82px;
+div.event-carousel{
 
-    i.fas{
-        font-size: 48px;
-        align-self: center;
-        color: display(font-icon);    
-    }
-    i.fa-chevron-left{
-        padding-right: 66px;
-    }
-    i.fa-chevron-right{
-        padding-left: 66px;
-    }
+    .carousel-inner{
+        a.carousel-control-prev-icon,
+        a.carousel-control-next-icon{
+            font-size: 48px;
+            align-self: center;
+            color: display(font-icon);    
+        }
+        span.carousel-control-prev-icon{
+            padding-right: 66px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+        span.carousel-control-next-icon{
+            padding-left: 66px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
 
-    @include desktop{
-        display: none;
-    }
-}
-section.event-grid-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: $zero-padding;
+        .carousel-item{
+            width: 100%;
+            padding: 0px 82px;
 
-    div.card{
-        img.card-img-top{
-            height: $events-img;
-        }
-        h3.card-title{
-            font-size: getCardTitle(font-size);
-            line-height: getCardTitle(line-height);
-            color: display(card-title);
-            margin-right: 4px;
-            padding: 22px 0px 20px 20.51px;
-        }
-        p.card-text{
-            font-size: getCardTlizard looks like dragonext(font-size);
-            line-height: getCardText(line-height);
-            color: display(card-text);
-            padding: 0px 17.71px 0px 20.51px;
-        }
-        .btn{
-            text-align: left;
-            padding: 13px 20.51px;
-        }
-    }
-}
+            @include mobile{
+                padding: 0px;
+            }
+            div.row{
+                div.col-md-6,
+                div.col-sm-1{
+                    @include desktop{
+                        max-width: 100%;
+                        padding: $mob-padding;
+                    }
+                } 
+                div.col-xl-3{
+                    padding: 0px 4px;
 
-div.hide{
-    display: none;
+                    @include mobile{
+                        padding: $zero-padding;
+                    }
+                }
+                div.card{
+                    padding: $zero-padding;
+
+                    img.card-img-top{
+                        height: $events-img;
+                    }
+                    h3.card-title{
+                        font-size: getCardTitle(font-size);
+                        line-height: getCardTitle(line-height);
+                        color: display(card-title);
+                        margin-right: 4px;
+                        padding: 22px 0px 20px 20.51px;
+                    }
+                    p.card-text{
+                        font-size: getCardText(font-size);
+                        line-height: getCardText(line-height);
+                        color: display(card-text);
+                        padding: 0px 17.71px 0px 20.51px;
+                    }
+                    .btn{
+                        text-align: left;
+                        padding: 13px 20.51px;
+                    }
+                }
+            }
+        }
+
+
+    }
 
     @include desktop{
         display: block;
@@ -572,14 +628,6 @@ div.hide{
     .carousel-control-next{
         width: 20px;
     }
-    
-    .carousel-control-prev-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-    }
-       
-       .carousel-control-next-icon {
-         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-       }
 }
 
 div.gallery{
@@ -600,15 +648,14 @@ div.gallery{
     }
     p.gallery-bottom{
         width: 100%;
+        padding: 0% 45%;
         height: 50px;
-        padding-right: 45%;
-        padding-left: 45%;
         font-size: 20px;
         line-height: 24px;
         color: display(bottom-text);
         margin-top: 75px;
 
-        @include mobile{
+        @include desktop{
             padding-right: 35%;
             padding-left: 35%;
             margin-top: 75px;
@@ -661,7 +708,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 248px 57px 14px 20px;
+            padding: 238px 57px 14px 20px;
         }
     }
     .grid-3{
@@ -751,7 +798,7 @@ section.gallery-grid-container{
 div.contact{
     width: 100%;
     height: 904px;
-    padding: 92px 151px 100px 150px;
+    padding: 92px 151px 99px 150px;
 
     h2{
         font-size: 35px;
