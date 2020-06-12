@@ -19,6 +19,7 @@ $colors:(
     contact-text: #4A4A4A,
     form-border: #D2D2D2,
     form-button: #191919,
+    font-icon: #191919,
 );
 
 $zero-margin: 0px;
@@ -90,7 +91,7 @@ $desktop: 1145px;
     }
 }
 
-$mobile: 845px;
+$mobile: 650px;
 
 @mixin mobile{
     @media (max-width: #{$mobile}) {
@@ -131,6 +132,7 @@ body{
 
 }
 
+//header div style
 div.header{
     width: 100%;
     height: 903px;
@@ -138,51 +140,61 @@ div.header{
     margin: $zero-margin;
     padding: $zero-padding;
 
+    //header div desktop style
     @include desktop{
+        width: 100%;
         height: auto;
     }
 
+    //the menu container style
     section.container{
         width: 100%;
-        margin: 0 auto;
         padding-left: 125px;
 
+        //the menu container desktop style
         @include desktop{
+            width: 100%;
             padding: $mob-padding;
         }
         
+        //responsive menu for tab and mobile
         nav.second{
             display: none;
 
             @include desktop{
-                display: inline-block;
+                display: flex;
+                flex-direction: row;
                 height: auto;
-                padding: $mob-padding;
-                padding-left: 50px;
-                text-align: center;
+
+                .navbar-brand{
+                    margin-right: 20%;
+                }
 
                 .navbar-nav{
-                    margin: $zero-margin;
-                    padding: $zero-padding;
+                    padding: $mob-padding;
                 }
                 .nav-item{
-                    padding: $mob-padding;
+                    padding-left: 30%;
+                    padding-right: 30%;
+                }
+                .nav-item:hover{
+                    background-color: white;
                 }
                 
             }
 
             @include mobile{
                 padding: $zero-padding;
-                padding-top: 20px;
 
                 .navbar-brand{
-                    margin-right: $zero-margin;
+                    margin-right: 20px;
                 }
             }
         }
 
+        //the menu for desktop
         nav{
-    
+            width: 100%;
             height: 100px;
             padding: 0px 20px;
 
@@ -200,7 +212,12 @@ div.header{
                         padding: getNavLink(padding);
                         margin: getNavLink(margin);
                     }
+                    .nav-link:hover{
+                        background-color: white;
+                    }
                 }
+
+                
                 
             }
 
@@ -209,11 +226,11 @@ div.header{
                 font-size: 24px;
                 line-height: 28px;
                 text-transform: $uppercase;
-                margin: 0 auto;
+                margin-right: 0px;
             }
 
             #nav-right{
-                margin: 0 auto;
+                padding-right: 10%;
 
                 .nav-item{
                     padding-left: 35px;
@@ -226,7 +243,13 @@ div.header{
                         padding: getNavLink(padding);
                         margin: getNavLink(margin);
                     }
+                    .nav-link:hover{
+                        background-color: white;
+                    }
                 }
+
+                
+
             }
 
             @include desktop{
@@ -247,19 +270,18 @@ section.bg{
     background-size: 100% 100%; 
     
     p{
-        height: 120px;
-        padding: 291.24px 409px 291.76px;
+        width: 100%;
+        height: auto;
+        padding-top: 20%;
+        padding-right: 25%;
+        padding-left: 25%;
         font-size: 20px;
         line-height: 40px;
 
-        @include desktop{
-            width: 100%;
-            padding: 290px 50px;
-        }
-
         @include mobile{
-            width: 100%;
-            padding: 130px 30px;
+            padding-top: 30%;
+            padding-right: $mob-padding;
+            padding-left: $mob-padding;
         }
     }
 }
@@ -387,84 +409,117 @@ div.news{
     width: 100%;
     height: 1052px;
     padding: 91px 151px 99px 150px;
+
+    @include desktop{
+        height: auto;
+        padding: $mob-padding;
+    }
     
     h2.heading{
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 40px;
+
+        @include desktop{
+            padding: $mob-padding;
+        }
     }
 
     p.bottom{
-        width: 150px;
+        width: 100%;
+        padding-right: 45%;
+        padding-left: 45%;
         height: 50px;
         font-size: 20px;
         line-height: 24px;
         color: display(bottom-text);
-        margin: 76px 474px 0px 516px;
+        margin-top: 76px;
+        align-items: center;
 
+        @include mobile{
+            padding-right: 35%;
+            padding-left: 35%;
+        }
+    
         i{
             margin-left: 10px;
         }
     }
 
-    
+    div.row{
 
-    @include desktop{
-        height: auto;
-        padding: $mob-padding;
-
-        p.bottom{
-            margin: 60px auto;
-            height: auto;
+        @include desktop{
+            padding: $mob-padding;
+            gap: 30px;
+            .card-4{
+                margin-top: -45px;
+            }
         }
-    }
-}
 
-div.news-grid-container{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-
-    div.card{
-        background-color: display(bg);
-        margin-bottom: 4px;
-        margin-right: 4px;
-
-        .card-title{
-            font-size: getCardTitle(font-size);
-            line-height: getCardTitle(line-height);
-            padding: 22px 0px 20px 20.51px;
-            color: display(card-title);
-            margin: $zero-margin;
+        @include mobile{
+            gap: 0px;
+            .card-6{
+                margin-top: 0px;
+            }
         }
-        .card-text{
-            font-size: getCardText(font-size);
-            line-height: getCardText(line-height);
-            color: display(card-text);
-            padding: 0px 17.71px 23px 20.51px;
-        }
-        img.card-img-top{
-            height: $news-img
-        }
-        
-        img.long{
-            height: 355px;
-        }  
-        
-        .btn{
-            text-align: left;
-            padding: 13px 20.51px;
-        }
-    }
+        div.col-md-6,
+        div.col-sm-1{
+            padding: $zero-padding;
 
-    @include desktop{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        
-    }
+            @include desktop{
+                padding-right: $zero-padding;
+                max-width: 100%;
+            }   
+        }
+        div.col-xl-3{
+            padding: $zero-padding;
+        }
 
-    @include mobile{
-        display: grid;
-        grid-template-columns: repeat(1, auto); 
+        div.card{
+            background-color: display(bg);
+            margin-bottom: 4px;
+            margin-right: 4px;
+
+            @include desktop{
+                width: 100%;
+                height: auto;    
+            }
+
+            .card-title{
+                font-size: getCardTitle(font-size);
+                line-height: getCardTitle(line-height);
+                padding: 22px 0px 20px 20.51px;
+                color: display(card-title);
+                margin: $zero-margin;
+            }
+            .card-text{
+                font-size: getCardText(font-size);
+                line-height: getCardText(line-height);
+                color: display(card-text);
+                padding: 0px 17.71px 23px 20.51px;
+            }
+
+            .img-fluid{
+                max-width: 100%;
+                height: auto;
+            }  
+            
+            .btn{
+                text-align: left;
+                padding: 13px 20.51px;
+            }
+        }
+
+        @include desktop{
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            
+        }
+
+        @include mobile{
+            display: grid;
+            grid-template-columns: repeat(1, auto); 
+        }
     }
 }
 
@@ -483,62 +538,104 @@ div.events{
     @include desktop{
         height: auto;
         padding: $mob-padding;
+    }
 
+    @include mobile{
         h2.event-heading{
-            padding-left: 0px;
+            padding-left: $mob-padding;
         }
     }
 }
 
+div.event-carousel{
 
-section.event-grid-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0px 82px;
+    .carousel-inner{
+        a.carousel-control-prev-icon,
+        a.carousel-control-next-icon{
+            font-size: 48px;
+            align-self: center;
+            color: display(font-icon);    
+        }
+        span.carousel-control-prev-icon{
+            padding-right: 66px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+        span.carousel-control-next-icon{
+            padding-left: 66px;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
 
-    div.card{
-        img.card-img-top{
-            height: $events-img;
+        .carousel-item{
+            width: 100%;
+            padding: 0px 82px;
+
+            @include mobile{
+                padding: 0px;
+            }
+            div.row{
+                div.col-md-6,
+                div.col-sm-1{
+                    @include desktop{
+                        max-width: 100%;
+                        padding: $mob-padding;
+                    }
+                } 
+                div.col-xl-3{
+                    padding: 0px 4px;
+
+                    @include mobile{
+                        padding: $zero-padding;
+                    }
+                }
+                div.card{
+                    padding: $zero-padding;
+
+                    img.card-img-top{
+                        height: $events-img;
+                    }
+                    h3.card-title{
+                        font-size: getCardTitle(font-size);
+                        line-height: getCardTitle(line-height);
+                        color: display(card-title);
+                        margin-right: 4px;
+                        padding: 22px 0px 20px 20.51px;
+                    }
+                    p.card-text{
+                        font-size: getCardText(font-size);
+                        line-height: getCardText(line-height);
+                        color: display(card-text);
+                        padding: 0px 17.71px 0px 20.51px;
+                    }
+                    .btn{
+                        text-align: left;
+                        padding: 13px 20.51px;
+                    }
+                }
+            }
         }
-        h3.card-title{
-            font-size: getCardTitle(font-size);
-            line-height: getCardTitle(line-height);
-            color: display(card-title);
-            margin-right: 4px;
-            padding: 22px 0px 20px 20.51px;
-        }
-        p.card-text{
-            font-size: getCardText(font-size);
-            line-height: getCardText(line-height);
-            color: display(card-text);
-            padding: 0px 17.71px 0px 20.51px;
-        }
-        .btn{
-            text-align: left;
-            padding: 13px 20.51px;
-        }
+
+
     }
 
     @include desktop{
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        padding: $zero-padding;
-
-        div.card{
-            margin-bottom: 30px;
-        }
-        
+        display: block;
+        padding: $mob-padding;
     }
 
-    @include mobile{
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-        padding: $zero-padding;
-
-        div.card{
-            margin-bottom: 30px;
+    .card-title{
+        @include desktop{
+            padding-left: 10px;
         }
-        
+    }
+    .card-text{
+        @include desktop{
+            padding-left: 10px;
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        width: 20px;
     }
 }
 
@@ -559,12 +656,19 @@ div.gallery{
         margin-bottom: 50px;
     }
     p.gallery-bottom{
-        width: 150px;
+        width: 100%;
+        padding: 0% 45%;
         height: 50px;
         font-size: 20px;
         line-height: 24px;
         color: display(bottom-text);
-        margin: 75px 474px 99px 516px;
+        margin-top: 75px;
+
+        @include desktop{
+            padding-right: 35%;
+            padding-left: 35%;
+            margin-top: 75px;
+        }
 
         i{
             margin-left: 10px;
@@ -583,16 +687,14 @@ div.gallery{
         div.hidden{
             display: block;
         }
-        p.gallery-bottom{
-            margin: 60px auto;
-            height: auto;
-        } 
     }
 }
 
-section.gallery-grid-container{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
+div.gallery-grid-container{
+
+    .col-md-3{
+        padding: $zero-padding;
+    }
 
     .grid-1{
         height: 180px;
@@ -604,7 +706,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 138px 62px 14px 20px;
+            padding: 128px 62px 14px 20px;
         }
     }
     .grid-2{
@@ -617,7 +719,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 268px 57px 14px 20px;
+            padding: 238px 57px 14px 20px;
         }
     }
     .grid-3{
@@ -630,7 +732,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 183px 102px 14px 20px;
+            padding: 173px 102px 14px 20px;
         }
     }
     .grid-4{
@@ -643,7 +745,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 138px 112px 14px 20px;
+            padding: 128px 112px 14px 20px;
         }
     }
     .grid-5{
@@ -656,7 +758,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 183px 92px 14px 20px;
+            padding: 173px 92px 14px 20px;
         }
     }
     .grid-6{
@@ -669,7 +771,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 138px 30px 14px 20px;
+            padding: 128px 30px 14px 20px;
         }
     }
     .grid-7{
@@ -682,7 +784,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 138px 38px 14px 20px;
+            padding: 128px 38px 14px 20px;
         }
     }
     .grid-8{
@@ -695,7 +797,7 @@ section.gallery-grid-container{
 
         p{
             color: #FFFFFF;
-            padding: 268px 58px 14px 20px;
+            padding: 258px 58px 14px 20px;
         }
     }
 
@@ -707,7 +809,7 @@ section.gallery-grid-container{
 div.contact{
     width: 100%;
     height: 904px;
-    padding: 92px 151px 100px 150px;
+    padding: 92px 151px 99px 150px;
 
     h2{
         font-size: 35px;
@@ -840,6 +942,7 @@ footer{
         font-size: 18px;
         line-height: 20px;
         padding-bottom: 34px;
+        margin-bottom: $zero-margin;
         span{
             font-size: 35px;
             line-height: 41px;
