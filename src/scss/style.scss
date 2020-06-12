@@ -147,7 +147,7 @@ div.header{
     }
 
     //the menu container style
-    section.container{
+    section.header__container{
         width: 100%;
         padding-left: 125px;
 
@@ -158,7 +158,7 @@ div.header{
         }
         
         //responsive menu for tab and mobile
-        nav.second{
+        .header__responsive-menu{
             display: none;
 
             @include desktop{
@@ -193,12 +193,12 @@ div.header{
         }
 
         //the menu for desktop
-        nav{
+        .header__large-menu{
             width: 100%;
             height: 100px;
             padding: 0px 20px;
 
-            #nav-left{
+            .header__left-menubar{
                 margin: 0 auto;
 
                 .nav-item{
@@ -229,7 +229,7 @@ div.header{
                 margin-right: 0px;
             }
 
-            #nav-right{
+            .header__right-menubar{
                 padding-right: 10%;
 
                 .nav-item{
@@ -261,7 +261,7 @@ div.header{
     }
 }
 
-section.bg{
+.header__banner{
     width: 100%;
     height: 703px;
     opacity: 0.75;
@@ -269,7 +269,7 @@ section.bg{
     background-repeat: no-repeat;
     background-size: 100% 100%; 
     
-    p{
+    .header__banner-text{
         width: 100%;
         height: auto;
         padding-top: 20%;
@@ -286,7 +286,7 @@ section.bg{
     }
 }
 
-div.header-end-grid-container{
+.header__banner-info-container{
     display: grid;
     grid-template-columns: 1fr 95px 1fr;
     height: 100px;
@@ -296,25 +296,25 @@ div.header-end-grid-container{
        padding: $mob-padding;
     }
     
-    section.header-end1{
+    section.header__banner-address{
         text-align: right;
         font-size: 14px;
         line-height: 22px;
         justify-self: end;
         padding-top: 29px;
 
-        p{
+        .header__address-text{
             margin: $zero-margin;
         }
     }
-    section.middle-line{
+    section.header__middle-line{
         width: 1px;
         height: 39px;
         background-color: display(border);
         margin: 31px 0px 30px;
         justify-self: center;
     }
-    section.header-end2{
+    section.header__social-icons{
         align-self: left;
         font-size: 18px;
         line-height: 18px;
@@ -327,19 +327,19 @@ div.header-end-grid-container{
         grid-template-columns: repeat(1, auto);
         height: auto;
 
-        section.header-end1{
+        section.header__banner-address{
             text-align: center;
             justify-self: center;
             padding: $zero-padding;
             margin: $zero-margin;
         }
 
-        section.middle-line{
+        section.header__middle-line{
             height: 1px;
             width: 39px;
         }
 
-        section.header-end2{
+        section.header__social-icons{
             align-self: center;
             justify-self: center;
             padding: $zero-padding;
@@ -350,31 +350,33 @@ div.header-end-grid-container{
 
 div.about{
     width: 100%;
-    height: 730px;
+    height: auto;
     padding: 94px 151px 91px 150px;
-    display: grid;
-    grid-template-columns: 50% auto;
     
-    section.heading-img{
+    .about__grid-img-1{
+        max-width: 100%;
+        height: auto;
         padding-right: 30px;
 
-        h1{
+        .about__main-title{
             font-size: 35px;
             line-height: 41px;
             margin-bottom: 42px;
         }
     }
-    section.description{
+    .about__grid-2{
+        max-width: 100%;
+        height: auto;
         padding-left: 30px;
         padding-top: 83px;
 
-        h2{
+        .about__title{
             font-size: 22px;
             line-height: 25px;
             margin-bottom: 20px;
         }
 
-        p{
+        .about__description{
             font-size: 15px;
             line-height: 18px;
             margin-bottom: 30px;
@@ -386,19 +388,18 @@ div.about{
         height: auto;
     }
     @include mobile{
-        display: grid;
-        grid-template-columns: repeat(1, auto);
 
-        section.heading-img{
+        .about__grid-1{
             padding: $mob-padding;
             margin: $zero-margin;
             
             .img-fluid{
-                width: 100%;
+                max-width: 100%;
+                height: auto;
             }
         }
 
-        section.description{
+        .about__grid-2{
             padding: $mob-padding;
             margin: $zero-margin;
         }
@@ -415,7 +416,7 @@ div.news{
         padding: $mob-padding;
     }
     
-    h2.heading{
+    .news__main-title{
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 40px;
@@ -425,7 +426,7 @@ div.news{
         }
     }
 
-    p.bottom{
+    .news__more-text{
         width: 100%;
         padding-right: 45%;
         padding-left: 45%;
@@ -510,16 +511,7 @@ div.news{
             }
         }
 
-        @include desktop{
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            
-        }
-
-        @include mobile{
-            display: grid;
-            grid-template-columns: repeat(1, auto); 
-        }
+       
     }
 }
 
@@ -528,7 +520,7 @@ div.events{
     height: 573px;
     padding: 66px 67px 99px;
 
-    h2.event-heading{
+    .events__main-title{
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 42px;
@@ -644,18 +636,18 @@ div.gallery{
     height: 942px;
     padding: 92px 151px 99px 150px;
 
-    h2.gallery-heading{
+    .gallery__main-title{
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 20px;
     }
-    h4.gallery-description{
+    .gallery__description{
         color: display(subheader);
         font-size: 18px;
         line-height: 21px;
         margin-bottom: 50px;
     }
-    p.gallery-bottom{
+    .gallery__more-text{
         width: 100%;
         padding: 0% 45%;
         height: 50px;
@@ -676,7 +668,7 @@ div.gallery{
         
     }
 
-    div.hidden{
+    .gallery__carousel-responsive{
         display: none;
     }
 
@@ -684,19 +676,19 @@ div.gallery{
         height: auto;
         padding: $mob-padding;
 
-        div.hidden{
+        .gallery__carousel-responsive{
             display: block;
         }
     }
 }
 
-div.gallery-grid-container{
+.gallery__grid-row{
 
     .col-md-3{
         padding: $zero-padding;
     }
 
-    .grid-1{
+    .gallery__img-1{
         height: 180px;
         background-image: url(../images/gallery1.jpg);
         background-repeat: no-repeat;
@@ -709,7 +701,7 @@ div.gallery-grid-container{
             padding: 128px 62px 14px 20px;
         }
     }
-    .grid-2{
+    .gallery__img-2{
         height: 310px;
         background-image: url(../images/gallery2.jpg);
         background-repeat: no-repeat;
@@ -722,7 +714,7 @@ div.gallery-grid-container{
             padding: 238px 57px 14px 20px;
         }
     }
-    .grid-3{
+    .gallery__img-3{
         height: 225px;
         background-image: url(../images/gallery3.jpg);
         background-repeat: no-repeat;
@@ -735,7 +727,7 @@ div.gallery-grid-container{
             padding: 173px 102px 14px 20px;
         }
     }
-    .grid-4{
+    .gallery__img-4{
         height: 180px;
         background-image: url(../images/gallery4.jpg);
         background-repeat: no-repeat;
@@ -748,7 +740,7 @@ div.gallery-grid-container{
             padding: 128px 112px 14px 20px;
         }
     }
-    .grid-5{
+    .gallery__img-5{
         height: 225px;
         background-image: url(../images/gallery5.jpg);
         background-repeat: no-repeat;
@@ -761,7 +753,7 @@ div.gallery-grid-container{
             padding: 173px 92px 14px 20px;
         }
     }
-    .grid-6{
+    .gallery__img-6{
         height: 180px;
         background-image: url(../images/gallery6.jpg);
         background-repeat: no-repeat;
@@ -774,7 +766,7 @@ div.gallery-grid-container{
             padding: 128px 30px 14px 20px;
         }
     }
-    .grid-7{
+    .gallery__img-7{
         height: 180px;
         background-image: url(../images/gallery7.jpg);
         background-repeat: no-repeat;
@@ -787,7 +779,7 @@ div.gallery-grid-container{
             padding: 128px 38px 14px 20px;
         }
     }
-    .grid-8{
+    .gallery__img-8{
         height: 310px;
         background-image: url(../images/gallery8.jpg);
         background-repeat: no-repeat;
@@ -811,7 +803,7 @@ div.contact{
     height: 904px;
     padding: 92px 151px 99px 150px;
 
-    h2{
+    .contact__main-title{
         font-size: 35px;
         line-height: 41px;
         margin-bottom: 42px;
@@ -823,17 +815,17 @@ div.contact{
     }
 }
 
-div.contact-grid-container{
+div.contact__grid-container{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 34px;
 
-    .contact-grid-1{
-        h4{
+    .contact__grid-1{
+        .contact__title{
             font-size: 22px;
             line-height: 25px;
         }
-        p{
+        .contact__text{
             font-size: 15px;
             line-height: 18px; 
             color: display(contact-text);
@@ -842,22 +834,22 @@ div.contact-grid-container{
         }
     }
 
-    .contact-grid-2{
-        h4{
+    .contact__grid-2{
+        .contact__form-title{
             font-size: 22px;
             line-height: 25px;
             margin-bottom: 22px;
         }
-        img.map-img{
+        .contact__map-img{
             width: 750px;
             height: 275px;
         }
-        form{
+        .contact__form{
             display: grid;
             grid-template-columns: 263px 1fr;
             gap: 30px;
 
-            .form-grid-1{
+            .contact__form-grid-1{
 
                 input{
                     width: 263px;
@@ -868,7 +860,7 @@ div.contact-grid-container{
                 } 
             }
 
-            .form-grid-2{
+            .contact__form-grid-2{
                 input{
                     width: 453px;
                     height: 178px;
@@ -891,29 +883,29 @@ div.contact-grid-container{
         grid-template-columns: repeat(1, auto);
         gap: 0px;
 
-        .contact-grid-1{
-            p{
+        .contact__grid-1{
+            .contact__text{
                 width: 100%;
             }
         }
 
-        .contact-grid-2{
-            img.map-img{
+        .contact__grid-2{
+            .contact__map-img{
                 width: 100%;
                 margin-top: 30px;
             }
-            form{
+            .contact__form{
                 display: grid;
                 grid-template-columns: repeat(1, auto);
 
-                .form-grid-1{
+                .contact__form-grid-1{
                     input{
                         margin-right: 20px;
                     }
                     
                 }
 
-                .form-grid-2{
+                .contact__form-grid-2{
                     input{
                         width: 100%;
                     }
@@ -927,17 +919,17 @@ div.contact-grid-container{
     }
 }
 
-footer{
+.footer{
     height: 152px;
     background-color: display(bg);
     text-align: center;
 
-    .copyright{
+    .footer__copyright{
         font-size: 15px;
         line-height: 18px;
         padding-top: 34px;
     }
-    .end-text{
+    .footer__end-text{
         text-transform: uppercase;
         font-size: 18px;
         line-height: 20px;

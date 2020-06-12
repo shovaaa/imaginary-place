@@ -13,9 +13,9 @@
 
 <body>
     <div class="header">
-        <section class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary first">
-                <ul class="navbar-nav ml-auto" id='nav-left'>
+        <section class="header__container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary header__large-menu">
+                <ul class="navbar-nav ml-auto header__left-menubar">
                     <li class="nav-item active">
                         <a href="#" class="nav-link">Home</a>
                     </li>
@@ -29,7 +29,7 @@
 
                 <a href="#" class="navbar-brand">Imaginary Place</a>
 
-                <ul class="navbar-nav ml-auto" id='nav-right'>
+                <ul class="navbar-nav ml-auto header__right-menubar">
                     <li class="nav-item">
                         <a href="#events" class="nav-link">Events</a>
                     </li>
@@ -42,7 +42,7 @@
                 </ul>
             </nav>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-lignt second">
+            <nav class="navbar navbar-expand-lg navbar-light bg-lignt header__responsive-menu">
                 <a class="navbar-brand" href="#">Imaginary Place</a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#openMenu">
                     <span class="navbar-toggler-icon my-toggler"></span>
@@ -72,23 +72,23 @@
             </nav>
 
         </section>
-        <section class="bg">
-            <p>
+        <section class="header__banner">
+            <p class="header__banner-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Suscipit eius blanditiis consectetur, laborum optio quasi
                 enim vero perspiciatis dicta similique quisquam maxime pariatur
                 explicabo dignissimos.
             </p>
         </section>
-        <div class="header-end-grid-container">
-            <section class="header-end1">
+        <div class="header__banner-info-container">
+            <section class="header__banner-address">
 
-                <p>+991 (347) 555-1234</p>
-                <p>74 5th Avenue at St. Marks Place Brooklyn, NY 11217</p>
+                <p class="header__address-text">+991 (347) 555-1234</p>
+                <p class="header__address-text">74 5th Avenue at St. Marks Place Brooklyn, NY 11217</p>
 
             </section>
-            <section class="middle-line"></section>
-            <section class="header-end2">
+            <section class="header__middle-line"></section>
+            <section class="header__social-icons">
                 <i class="fab fa-facebook-square"></i>
                 <i class="fab fa-twitter-square"></i>
                 <i class="fab fa-instagram"></i>
@@ -100,40 +100,45 @@
         </div>
     </div>
 
-    <div class="about" id="about">
-        <section class="heading-img">
-            <h1>About</h1>
-            <img src="./src/images/about.jpg" class="img-fluid about-img">
-        </section>
-        <section class="description">
-            <h2>Description</h2>
-            <p>
-                Donec rutrum congue leo eget malesuada. Curabitur arcu erat,
-                accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat,
-                accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus.
-                Sed porttitor lectus nibh.
-            </p>
-            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor
-                lectus nibh. Sed porttitor lectus nibh.
-            </p>
-            <h2>Mission</h2>
-            <p>
-                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget
-                tortor risus. Sed porttitor lectus nibh.
-            </p>
-            <p>
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            </p>
-        </section>
+    <div class="about">
+        <div class="row">
+            <div class="col-sm-6 about__grid-1">
+                <h1 class="about__main-title">About</h1>
+                <img src="./src/images/about.jpg" class="img-fluid about__img">
+            </div>
+
+            <div class="col-sm-6 about__grid-2">
+                <h2 class="about__title">Description</h2>
+                <p class="about__description">
+                    Donec rutrum congue leo eget malesuada. Curabitur arcu erat,
+                    accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat,
+                    accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus.
+                    Sed porttitor lectus nibh.
+                </p>
+                <p class="about__description">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum
+                    ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                    Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor
+                    lectus nibh. Sed porttitor lectus nibh.
+                </p>
+                <h2 class="about__title">Mission</h2>
+                <p class="about__description">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget
+                    tortor risus. Sed porttitor lectus nibh.
+                </p>
+                <p class="about__description">
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                    Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                </p>
+            </div>
+        </div>
     </div>
+
     <hr class="long-line">
-    <div class="news" id="news">
-        <h2 class="heading">News</h2>
+
+    <div class="news">
+        <h2 class="news__main-title">News</h2>
         <div class=row>
             <div class="col-sm-1 col-md-6 col-xl-3">
                 <div class="card card-1">
@@ -211,14 +216,14 @@
                 </div>
             </div>
         </div>
-        <p class="bottom">
+        <p class="news__more-text">
             More
             <i class="fas fa-angle-double-down"></i>
         </p>
     </div>
     <hr class="long-line">
     <div class="events" id="events">
-        <h2 class="event-heading">Events</h2>
+        <h2 class="events__main-title">Events</h2>
 
         <div id="carouselEvents" class="carousel slide event-carousel carousel-multi-item" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
@@ -338,44 +343,44 @@
     </div>
     <hr class="long-line">
     <div class="gallery" id="gallery">
-        <h2 class="gallery-heading">Gallery</h2>
-        <h4 class="gallery-description">Photos | Videos</h4>
-        <div class="gallery-grid-container row">
+        <h2 class="gallery__main-title">Gallery</h2>
+        <h4 class="gallery__description">Photos | Videos</h4>
+        <div class="gallery__grid-row row">
             <div class="col-md-3">
-                <div class="grid-1">
+                <div class="gallery__img-1">
                     <p>San Diego Vacation Rental</p>
                 </div>
-                <div class="grid-5">
+                <div class="gallery__img-5">
                     <p>Lost In Lagos Portugal</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="grid-2">
+                <div class="gallery__img-2">
                     <p>Stu Unger Rise And Fall Of </p>
                 </div>
-                <div class="grid-6">
+                <div class="gallery__img-6">
                     <p>Vacation Home Rental Success</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="grid-3">
+                <div class="gallery__img-3">
                     <p>Become A Travel Pro</p>
                 </div>
-                <div class="grid-7">
+                <div class="gallery__img-7">
                     <p>Gem Of The Chamonix Valley</p>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="grid-4">
+                <div class="gallery__img-4">
                     <p>Your Mental Health</p>
                 </div>
-                <div class="grid-8">
+                <div class="gallery__img-8">
                     <p>Rocky Mountain Vacations</p>
                 </div>
             </div>
         </div>
 
-        <div id="carousel-gallery" class="carousel slide hidden" data-ride="carousel">
+        <div id="carousel-gallery" class="carousel slide gallery__carousel-responsive" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carousel-gallery" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-gallery" data-slide-to="1"></li>
@@ -463,47 +468,49 @@
             </a>
         </div>
 
-        <p class="gallery-bottom">
+        <p class="gallery__more-text">
             More
             <i class="fas fa-angle-double-down"></i>
         </p>
     </div>
+
     <hr class="long-line">
+
     <div class="contact" id="contact">
-        <h2>Contact</h2>
-        <div class="contact-grid-container">
-            <section class="contact-grid-1">
-                <h4>Location</h4>
-                <p>74 5th Avenue at St. Marks Place Brooklyn, NY 11217, United States of America</p>
+        <h2 class="contact__main-title">Contact</h2>
+        <div class="contact__grid-container">
+            <section class="contact__grid-1">
+                <h4 class="contact__title">Location</h4>
+                <p class="contact__text">74 5th Avenue at St. Marks Place Brooklyn, NY 11217, United States of America</p>
 
-                <h4>Telephone</h4>
-                <p>+991 321 987654</p>
+                <h4 class="contact__title">Telephone</h4>
+                <p class="contact__text">+991 321 987654</p>
 
-                <h4>Info</h4>
-                <p>info-office@imaginaryplace.com</p>
+                <h4 class="contact__title">Info</h4>
+                <p class="contact__text">info-office@imaginaryplace.com</p>
 
             </section>
-            <section class="contact-grid-2">
-                <h4>Message</h4>
+            <section class="contact__grid-2">
+                <h4 class="contact__form-title">Message</h4>
 
-                <form>
-                    <section class="form-grid-1">
+                <form class="contact__form">
+                    <section class="contact__form-grid-1">
                         <input placeholder="Name">
                         <input placeholder="Email">
                         <input placeholder="Phone">
                     </section>
-                    <section class="form-grid-2">
+                    <section class="contact__form-grid-2">
                         <input placeholder="Message">
                     </section>
                     <button>Submit</button>
                 </form>
-                <img src="./src/images/map-image.jpg" class="map-img">
+                <img src="./src/images/map-image.jpg" class="contact__map-img">
             </section>
         </div>
     </div>
-    <footer>
-        <p class="copyright">© Copyright Imaginary Company | Design by ABC Creation Co.</p>
-        <p class="end-text">Powered by <span>A</span></p>
+    <footer class="footer">
+        <p class="footer__copyright">© Copyright Imaginary Company | Design by ABC Creation Co.</p>
+        <p class="footer__end-text">Powered by <span>A</span></p>
     </footer>
 
 

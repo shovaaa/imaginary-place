@@ -7195,82 +7195,82 @@ div.header {
     div.header {
       width: 100%;
       height: auto; } }
-  div.header section.container {
+  div.header section.header__container {
     width: 100%;
     padding-left: 125px; }
     @media (max-width: 1145px) {
-      div.header section.container {
+      div.header section.header__container {
         width: 100%;
         padding: 30px; } }
-    div.header section.container nav.second {
+    div.header section.header__container .header__responsive-menu {
       display: none; }
       @media (max-width: 1145px) {
-        div.header section.container nav.second {
+        div.header section.header__container .header__responsive-menu {
           display: flex;
           flex-direction: row;
           height: auto; }
-          div.header section.container nav.second .navbar-brand {
+          div.header section.header__container .header__responsive-menu .navbar-brand {
             margin-right: 20%; }
-          div.header section.container nav.second .navbar-nav {
+          div.header section.header__container .header__responsive-menu .navbar-nav {
             padding: 30px; }
-          div.header section.container nav.second .nav-item {
+          div.header section.header__container .header__responsive-menu .nav-item {
             padding-left: 30%;
             padding-right: 30%; }
-          div.header section.container nav.second .nav-item:hover {
+          div.header section.header__container .header__responsive-menu .nav-item:hover {
             background-color: white; } }
       @media (max-width: 650px) {
-        div.header section.container nav.second {
+        div.header section.header__container .header__responsive-menu {
           padding: 0px; }
-          div.header section.container nav.second .navbar-brand {
+          div.header section.header__container .header__responsive-menu .navbar-brand {
             margin-right: 20px; } }
-    div.header section.container nav {
+    div.header section.header__container .header__large-menu {
       width: 100%;
       height: 100px;
       padding: 0px 20px; }
-      div.header section.container nav #nav-left {
+      div.header section.header__container .header__large-menu .header__left-menubar {
         margin: 0 auto; }
-        div.header section.container nav #nav-left .nav-item {
+        div.header section.header__container .header__large-menu .header__left-menubar .nav-item {
           padding-right: 32px; }
-          div.header section.container nav #nav-left .nav-item .nav-link {
+          div.header section.header__container .header__large-menu .header__left-menubar .nav-item .nav-link {
             color: #666666;
             font-size: 15px;
             line-height: 18px;
             text-transform: uppercase;
             padding: 0px;
             margin: 0px; }
-          div.header section.container nav #nav-left .nav-item .nav-link:hover {
+          div.header section.header__container .header__large-menu .header__left-menubar .nav-item .nav-link:hover {
             background-color: white; }
-      div.header section.container nav .navbar-brand {
+      div.header section.header__container .header__large-menu .navbar-brand {
         color: #191919 !important;
         font-size: 24px;
         line-height: 28px;
         text-transform: uppercase;
         margin-right: 0px; }
-      div.header section.container nav #nav-right {
+      div.header section.header__container .header__large-menu .header__right-menubar {
         padding-right: 10%; }
-        div.header section.container nav #nav-right .nav-item {
+        div.header section.header__container .header__large-menu .header__right-menubar .nav-item {
           padding-left: 35px; }
-          div.header section.container nav #nav-right .nav-item .nav-link {
+          div.header section.header__container .header__large-menu .header__right-menubar .nav-item .nav-link {
             color: #666666;
             font-size: 15px;
             line-height: 18px;
             text-transform: uppercase;
             padding: 0px;
             margin: 0px; }
-          div.header section.container nav #nav-right .nav-item .nav-link:hover {
+          div.header section.header__container .header__large-menu .header__right-menubar .nav-item .nav-link:hover {
             background-color: white; }
       @media (max-width: 1145px) {
-        div.header section.container nav {
+        div.header section.header__container .header__large-menu {
           display: none; } }
 
-section.bg {
+.header__banner {
   width: 100%;
   height: 703px;
   opacity: 0.75;
   background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%; }
-  section.bg p {
+  .header__banner .header__banner-text {
     width: 100%;
     height: auto;
     padding-top: 20%;
@@ -7279,53 +7279,53 @@ section.bg {
     font-size: 20px;
     line-height: 40px; }
     @media (max-width: 650px) {
-      section.bg p {
+      .header__banner .header__banner-text {
         padding-top: 30%;
         padding-right: 30px;
         padding-left: 30px; } }
 
-div.header-end-grid-container {
+.header__banner-info-container {
   display: grid;
   grid-template-columns: 1fr 95px 1fr;
   height: 100px; }
   @media (max-width: 650px) {
-    div.header-end-grid-container {
+    .header__banner-info-container {
       display: grid;
       padding: 30px; } }
-  div.header-end-grid-container section.header-end1 {
+  .header__banner-info-container section.header__banner-address {
     text-align: right;
     font-size: 14px;
     line-height: 22px;
     justify-self: end;
     padding-top: 29px; }
-    div.header-end-grid-container section.header-end1 p {
+    .header__banner-info-container section.header__banner-address .header__address-text {
       margin: 0px; }
-  div.header-end-grid-container section.middle-line {
+  .header__banner-info-container section.header__middle-line {
     width: 1px;
     height: 39px;
     background-color: #B3B3B3;
     margin: 31px 0px 30px;
     justify-self: center; }
-  div.header-end-grid-container section.header-end2 {
+  .header__banner-info-container section.header__social-icons {
     align-self: left;
     font-size: 18px;
     line-height: 18px;
     justify-self: start;
     padding-top: 42px; }
   @media (max-width: 650px) {
-    div.header-end-grid-container {
+    .header__banner-info-container {
       display: grid;
       grid-template-columns: repeat(1, auto);
       height: auto; }
-      div.header-end-grid-container section.header-end1 {
+      .header__banner-info-container section.header__banner-address {
         text-align: center;
         justify-self: center;
         padding: 0px;
         margin: 0px; }
-      div.header-end-grid-container section.middle-line {
+      .header__banner-info-container section.header__middle-line {
         height: 1px;
         width: 39px; }
-      div.header-end-grid-container section.header-end2 {
+      .header__banner-info-container section.header__social-icons {
         align-self: center;
         justify-self: center;
         padding: 0px;
@@ -7333,24 +7333,26 @@ div.header-end-grid-container {
 
 div.about {
   width: 100%;
-  height: 730px;
-  padding: 94px 151px 91px 150px;
-  display: grid;
-  grid-template-columns: 50% auto; }
-  div.about section.heading-img {
+  height: auto;
+  padding: 94px 151px 91px 150px; }
+  div.about .about__grid-img-1 {
+    max-width: 100%;
+    height: auto;
     padding-right: 30px; }
-    div.about section.heading-img h1 {
+    div.about .about__grid-img-1 .about__main-title {
       font-size: 35px;
       line-height: 41px;
       margin-bottom: 42px; }
-  div.about section.description {
+  div.about .about__grid-2 {
+    max-width: 100%;
+    height: auto;
     padding-left: 30px;
     padding-top: 83px; }
-    div.about section.description h2 {
+    div.about .about__grid-2 .about__title {
       font-size: 22px;
       line-height: 25px;
       margin-bottom: 20px; }
-    div.about section.description p {
+    div.about .about__grid-2 .about__description {
       font-size: 15px;
       line-height: 18px;
       margin-bottom: 30px; }
@@ -7359,17 +7361,15 @@ div.about {
       padding: 30px;
       height: auto; } }
   @media (max-width: 650px) {
-    div.about {
-      display: grid;
-      grid-template-columns: repeat(1, auto); }
-      div.about section.heading-img {
-        padding: 30px;
-        margin: 0px; }
-        div.about section.heading-img .img-fluid {
-          width: 100%; }
-      div.about section.description {
-        padding: 30px;
-        margin: 0px; } }
+    div.about .about__grid-1 {
+      padding: 30px;
+      margin: 0px; }
+      div.about .about__grid-1 .img-fluid {
+        max-width: 100%;
+        height: auto; }
+    div.about .about__grid-2 {
+      padding: 30px;
+      margin: 0px; } }
 
 div.news {
   width: 100%;
@@ -7379,14 +7379,14 @@ div.news {
     div.news {
       height: auto;
       padding: 30px; } }
-  div.news h2.heading {
+  div.news .news__main-title {
     font-size: 35px;
     line-height: 41px;
     margin-bottom: 40px; }
     @media (max-width: 1145px) {
-      div.news h2.heading {
+      div.news .news__main-title {
         padding: 30px; } }
-  div.news p.bottom {
+  div.news .news__more-text {
     width: 100%;
     padding-right: 45%;
     padding-left: 45%;
@@ -7397,10 +7397,10 @@ div.news {
     margin-top: 76px;
     align-items: center; }
     @media (max-width: 650px) {
-      div.news p.bottom {
+      div.news .news__more-text {
         padding-right: 35%;
         padding-left: 35%; } }
-    div.news p.bottom i {
+    div.news .news__more-text i {
       margin-left: 10px; }
   @media (max-width: 1145px) {
     div.news div.row {
@@ -7448,20 +7448,12 @@ div.news {
     div.news div.row div.card .btn {
       text-align: left;
       padding: 13px 20.51px; }
-  @media (max-width: 1145px) {
-    div.news div.row {
-      display: grid;
-      grid-template-columns: repeat(2, auto); } }
-  @media (max-width: 650px) {
-    div.news div.row {
-      display: grid;
-      grid-template-columns: repeat(1, auto); } }
 
 div.events {
   width: 100%;
   height: 573px;
   padding: 66px 67px 99px; }
-  div.events h2.event-heading {
+  div.events .events__main-title {
     font-size: 35px;
     line-height: 41px;
     margin-bottom: 42px;
@@ -7544,16 +7536,16 @@ div.gallery {
   width: 100%;
   height: 942px;
   padding: 92px 151px 99px 150px; }
-  div.gallery h2.gallery-heading {
+  div.gallery .gallery__main-title {
     font-size: 35px;
     line-height: 41px;
     margin-bottom: 20px; }
-  div.gallery h4.gallery-description {
+  div.gallery .gallery__description {
     color: #666666;
     font-size: 18px;
     line-height: 21px;
     margin-bottom: 50px; }
-  div.gallery p.gallery-bottom {
+  div.gallery .gallery__more-text {
     width: 100%;
     padding: 0% 45%;
     height: 50px;
@@ -7562,121 +7554,121 @@ div.gallery {
     color: #666666;
     margin-top: 75px; }
     @media (max-width: 1145px) {
-      div.gallery p.gallery-bottom {
+      div.gallery .gallery__more-text {
         padding-right: 35%;
         padding-left: 35%;
         margin-top: 75px; } }
-    div.gallery p.gallery-bottom i {
+    div.gallery .gallery__more-text i {
       margin-left: 10px; }
-  div.gallery div.hidden {
+  div.gallery .gallery__carousel-responsive {
     display: none; }
   @media (max-width: 1145px) {
     div.gallery {
       height: auto;
       padding: 30px; }
-      div.gallery div.hidden {
+      div.gallery .gallery__carousel-responsive {
         display: block; } }
 
-div.gallery-grid-container .col-md-3 {
+.gallery__grid-row .col-md-3 {
   padding: 0px; }
 
-div.gallery-grid-container .grid-1 {
+.gallery__grid-row .gallery__img-1 {
   height: 180px;
   background-image: url(../images/gallery1.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-1 p {
+  .gallery__grid-row .gallery__img-1 p {
     color: #FFFFFF;
     padding: 128px 62px 14px 20px; }
 
-div.gallery-grid-container .grid-2 {
+.gallery__grid-row .gallery__img-2 {
   height: 310px;
   background-image: url(../images/gallery2.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-2 p {
+  .gallery__grid-row .gallery__img-2 p {
     color: #FFFFFF;
     padding: 238px 57px 14px 20px; }
 
-div.gallery-grid-container .grid-3 {
+.gallery__grid-row .gallery__img-3 {
   height: 225px;
   background-image: url(../images/gallery3.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-3 p {
+  .gallery__grid-row .gallery__img-3 p {
     color: #FFFFFF;
     padding: 173px 102px 14px 20px; }
 
-div.gallery-grid-container .grid-4 {
+.gallery__grid-row .gallery__img-4 {
   height: 180px;
   background-image: url(../images/gallery4.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-4 p {
+  .gallery__grid-row .gallery__img-4 p {
     color: #FFFFFF;
     padding: 128px 112px 14px 20px; }
 
-div.gallery-grid-container .grid-5 {
+.gallery__grid-row .gallery__img-5 {
   height: 225px;
   background-image: url(../images/gallery5.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-5 p {
+  .gallery__grid-row .gallery__img-5 p {
     color: #FFFFFF;
     padding: 173px 92px 14px 20px; }
 
-div.gallery-grid-container .grid-6 {
+.gallery__grid-row .gallery__img-6 {
   height: 180px;
   background-image: url(../images/gallery6.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-6 p {
+  .gallery__grid-row .gallery__img-6 p {
     color: #FFFFFF;
     padding: 128px 30px 14px 20px; }
 
-div.gallery-grid-container .grid-7 {
+.gallery__grid-row .gallery__img-7 {
   height: 180px;
   background-image: url(../images/gallery7.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-7 p {
+  .gallery__grid-row .gallery__img-7 p {
     color: #FFFFFF;
     padding: 128px 38px 14px 20px; }
 
-div.gallery-grid-container .grid-8 {
+.gallery__grid-row .gallery__img-8 {
   height: 310px;
   background-image: url(../images/gallery8.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-bottom: 4px;
   margin-right: 4px; }
-  div.gallery-grid-container .grid-8 p {
+  .gallery__grid-row .gallery__img-8 p {
     color: #FFFFFF;
     padding: 258px 58px 14px 20px; }
 
 @media (max-width: 1145px) {
-  div.gallery-grid-container {
+  .gallery__grid-row {
     display: none; } }
 
 div.contact {
   width: 100%;
   height: 904px;
   padding: 92px 151px 99px 150px; }
-  div.contact h2 {
+  div.contact .contact__main-title {
     font-size: 35px;
     line-height: 41px;
     margin-bottom: 42px; }
@@ -7685,81 +7677,81 @@ div.contact {
       height: auto;
       padding: 30px; } }
 
-div.contact-grid-container {
+div.contact__grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 34px; }
-  div.contact-grid-container .contact-grid-1 h4 {
+  div.contact__grid-container .contact__grid-1 .contact__title {
     font-size: 22px;
     line-height: 25px; }
-  div.contact-grid-container .contact-grid-1 p {
+  div.contact__grid-container .contact__grid-1 .contact__text {
     font-size: 15px;
     line-height: 18px;
     color: #4A4A4A;
     margin-top: 20px;
     margin-bottom: 38px; }
-  div.contact-grid-container .contact-grid-2 h4 {
+  div.contact__grid-container .contact__grid-2 .contact__form-title {
     font-size: 22px;
     line-height: 25px;
     margin-bottom: 22px; }
-  div.contact-grid-container .contact-grid-2 img.map-img {
+  div.contact__grid-container .contact__grid-2 .contact__map-img {
     width: 750px;
     height: 275px; }
-  div.contact-grid-container .contact-grid-2 form {
+  div.contact__grid-container .contact__grid-2 .contact__form {
     display: grid;
     grid-template-columns: 263px 1fr;
     gap: 30px; }
-    div.contact-grid-container .contact-grid-2 form .form-grid-1 input {
+    div.contact__grid-container .contact__grid-2 .contact__form .contact__form-grid-1 input {
       width: 263px;
       height: 46px;
       margin-bottom: 20px;
       border: 1px solid #D2D2D2;
       padding: 10px; }
-    div.contact-grid-container .contact-grid-2 form .form-grid-2 input {
+    div.contact__grid-container .contact__grid-2 .contact__form .contact__form-grid-2 input {
       width: 453px;
       height: 178px;
       border: 1px solid #D2D2D2;
       padding: 10px; }
-    div.contact-grid-container .contact-grid-2 form button {
+    div.contact__grid-container .contact__grid-2 .contact__form button {
       width: 150px;
       height: 50px;
       border: 2px solid #191919;
       border-radius: 6px;
       margin: 30px 400px 49px 250px; }
   @media (max-width: 1145px) {
-    div.contact-grid-container {
+    div.contact__grid-container {
       display: grid;
       grid-template-columns: repeat(1, auto);
       gap: 0px; }
-      div.contact-grid-container .contact-grid-1 p {
+      div.contact__grid-container .contact__grid-1 .contact__text {
         width: 100%; }
-      div.contact-grid-container .contact-grid-2 img.map-img {
+      div.contact__grid-container .contact__grid-2 .contact__map-img {
         width: 100%;
         margin-top: 30px; }
-      div.contact-grid-container .contact-grid-2 form {
+      div.contact__grid-container .contact__grid-2 .contact__form {
         display: grid;
         grid-template-columns: repeat(1, auto); }
-        div.contact-grid-container .contact-grid-2 form .form-grid-1 input {
+        div.contact__grid-container .contact__grid-2 .contact__form .contact__form-grid-1 input {
           margin-right: 20px; }
-        div.contact-grid-container .contact-grid-2 form .form-grid-2 input {
+        div.contact__grid-container .contact__grid-2 .contact__form .contact__form-grid-2 input {
           width: 100%; }
-        div.contact-grid-container .contact-grid-2 form button {
+        div.contact__grid-container .contact__grid-2 .contact__form button {
           margin: 0 auto; } }
 
-footer {
+.footer {
   height: 152px;
   background-color: #E3E3E3;
   text-align: center; }
-  footer .copyright {
+  .footer .footer__copyright {
     font-size: 15px;
     line-height: 18px;
     padding-top: 34px; }
-  footer .end-text {
+  .footer .footer__end-text {
     text-transform: uppercase;
     font-size: 18px;
     line-height: 20px;
     padding-bottom: 34px;
     margin-bottom: 0px; }
-    footer .end-text span {
+    .footer .footer__end-text span {
       font-size: 35px;
       line-height: 41px; }
